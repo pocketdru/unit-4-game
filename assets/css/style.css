@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:400,700');
+
+.container {
+    height: 843px;
+    width: 1200px;
+    background-image: url("../images/background.png");
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: 'Chakra Petch';
+}
+
+.header h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 500px;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 2em;
+}
+
+.characters {
+    margin: 10px 0px 10px;
+    display: flex;
+}
+
+.characters div {
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+    font-family: 'Chakra Petch';
+
+}
+
+.enemiesAvailable button{
+    background-color: red;
+}
+
+.defender button{
+    background-color:black;
+    color: white;
+}
+
+.defenderText {
+    font-family: 'Chakra Petch';
+    font-size: 20px;
+    font-weight: 700;
+    background: rgb(255,255,255, 0.5);
+    width: 740px;
+}
+
+#reset {
+    display: none;
+}

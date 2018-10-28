@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <title>Star Wars RPG</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Star Wars RPG</h1>
+        </div>
+        <div class="characters">
+            <button class="character" id="jarJar" value="120" name="Jar Jar Binks"> 
+                <p>Jar Jar Binks</p>
+                <img src="assets/images/Jjportrait.png"> 
+                <p id="health">120</p>
+            </button>
+            <button class="character" id="c_po" value="100" name="C-3PO">
+                <p>C-3PO</p>
+                <img src="assets/images/C-3PO_droid.png">
+                <p id="health">100</p>
+            </button>
+            <button class="character" id="chewbacca" value="140" name="Chewbacca">
+                <p>Chewbacca</p>
+                <img src="assets/images/chewbacca.png">
+                <p id="health">140</p>
+            </button>
+            <button class="character" id="hanSolo" value="160" name="Han Solo">
+                <p>Han Solo</p>
+                <img src="assets/images/Han_Solo.png">
+                <p id="health">160</p>
+            </button>
+        </div>
+        <h2>Your character</h2>
+        <div class="yourCharacter"></div>
+        <br>
+        <h2>Enemies available to attak</h2>
+        <div class="enemiesAvailable"></div>
+        <br>
+        <h2>Fight Section</h2>
+        <div class="fightSection"></div>
+        <br>
+        <button class="attack">Attack</button>
+        <br>
+        <h2>Defender</h2>
+        <div class="defender"></div>
+        <p class="defenderText"></p>
+        <button id="reset">reset</button>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="assets/javascript/game.js"></script>
+</html>
