@@ -31,7 +31,7 @@ h1, h2 {
     display: flex;
 }
 
-.characters div {
+.characters button {
     background-color: #ffffff;
     text-align: center;
     margin: 0px 5px 0px 5px;
@@ -41,11 +41,16 @@ h1, h2 {
 
 .enemiesAvailable button{
     background-color: red;
+    margin: 0px 5px 0px 5px;
+    font-family: 'Chakra Petch';
+
 }
 
 .defender button{
     background-color:black;
     color: white;
+    margin: 0px 5px 0px 5px;
+    font-family: 'Chakra Petch';
 }
 
 .defenderText {
