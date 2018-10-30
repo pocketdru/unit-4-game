@@ -16,23 +16,28 @@ $(".character").on("click", function () {
         $("#defender").removeClass("character");
         $("#defender").appendTo($(".defender"));
         //$("#health").removeAttr("id");
+        $("#start").css("display", "inline-block");
+
     });
 
 });
 
-var n = 0;
-var health;
-var defenderHealth;
+var n;
+var health = 0;
+var defenderHealth = 0;
+
+
 $(".attack").on("click", function () {
-    // health = $(this).val();
-    // console.log($("#selected").val());
     this.health = $("#selected").val();
     this.defenderHealth = $("#defender").val();
-    //  console.log(health);
-    n += 8;
-    this.defenderHealth -=n;
-    $("#defender").find("#health").html(this.defenderHealth);
+    //n = n + 8;
+    //this.defenderHealth = this.defenderHealth - (n + 8);
+    // $("#defender").find("#health").html(this.defenderHealth);
+    n = 0;
     $(".attack").on("click", function () {
+        n = n +8;
+        this.defenderHealth = this.defenderHealth - n;
+        $("#defender").find("#health").html(this.defenderHealth);
         this.health -= 25;
         console.log(this.health);
         $("#health").html(this.health);
@@ -41,13 +46,15 @@ $(".attack").on("click", function () {
             var text1 = "You been defeated... GAME OVER!!!";
             $(".defenderText").html(text1);
             $("#reset").css("display", "inline-block");
-        }
+        } else {
+
+            var text = "You attacked " + $("#defender").attr("name") + " for " + n + " damage " + "\n. " + $("#defender").attr("name") + " attacked you back for 25 damage.";
+            $(".defenderText").html(text);
+        };
     });
 
-    var text = "You attacked " + $("#defender").attr("name") + " for " + n + " damage " + "\n. " + $("#defender").attr("name") + " attacked you back for 25 damage.";
-    $(".defenderText").html(text);
-
-
+    // var text = "You attacked " + $("#defender").attr("name") + " for " + n + " damage " + "\n. " + $("#defender").attr("name") + " attacked you back for 25 damage.";
+    // $(".defenderText").html(text);
 
 });
 
