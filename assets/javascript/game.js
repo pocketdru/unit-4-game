@@ -35,8 +35,16 @@ $(".attack").on("click", function () {
     // $("#defender").find("#health").html(this.defenderHealth);
     n = 0;
     $(".attack").on("click", function () {
-        n = n +8;
+        n = n + 8;
         this.defenderHealth = this.defenderHealth - n;
+
+        if (this.defenderHealth <= 0) {
+            $(".defender").find("button").remove();
+            $(".defender").find("button").removeData();
+            n = 0;
+            
+        }
+
         $("#defender").find("#health").html(this.defenderHealth);
         this.health -= 25;
         console.log(this.health);
